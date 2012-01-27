@@ -1,10 +1,14 @@
 # Programs to install
 
-We will be using the following software programs during this workshop. These are:
+We will be using the following software programs during this workshop. 
+
+## 10 -12: Urban Data Management and Visualization
 
 * R: http://www.r-project.org/
 * Rstudio: http://rstudio.org/
 * QGIS: http://www.qgis.org/
+
+## Web-Based Mapping and Data Visualization
 
 For the afternoon session, you need a text-editor that provides syntax-coloring and web accesible space.
 Here are some options for text-editors:
@@ -17,4 +21,4 @@ Web-accessible space:
 * www.dropbox.com 
 
 Openlayers - this is a javascript library: 
-*http://openlayers.org/download/OpenLayers-2.11.zip
+* http://openlayers.org/download/OpenLayers-2.11.zip
