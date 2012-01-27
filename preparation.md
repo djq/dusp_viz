@@ -3,7 +3,9 @@
 We will be using the following software programs during this workshop. These are:
 
 R: http://www.r-project.org/
+
 Rstudio: http://rstudio.org/
+
 QGIS: http://www.qgis.org/
 
 
