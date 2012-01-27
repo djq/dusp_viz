@@ -8,7 +8,7 @@ We will be using the following software programs during this workshop.
 * Rstudio: http://rstudio.org/
 * QGIS: http://www.qgis.org/
 
-## Web-Based Mapping and Data Visualization
+## 1- 3: Web-Based Mapping and Data Visualization
 
 For the afternoon session, you need a text-editor that provides syntax-coloring and web accesible space.
 Here are some options for text-editors:
@@ -18,7 +18,9 @@ Here are some options for text-editors:
 * Linux: http://www.geany.org/
 
 Web-accessible space: 
+
 * www.dropbox.com 
 
 Openlayers - this is a javascript library: 
+
 * http://openlayers.org/download/OpenLayers-2.11.zip
