@@ -13,5 +13,8 @@ Here are some options for text-editors:
 * Windows: http://notepad-plus-plus.org/ 
 * Linux: http://www.geany.org/
 
-* Web-accessible space: www.dropbox.com 
-* Openlayers: http://openlayers.org/download/OpenLayers-2.11.zip
+Web-accessible space: 
+* www.dropbox.com 
+
+Openlayers - this is a javascript library: 
+*http://openlayers.org/download/OpenLayers-2.11.zip
