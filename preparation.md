@@ -17,5 +17,5 @@ Linux: http://www.geany.org/
 Web-accessible space:
 Dropbox: www.dropbox.com 
 
-You should download the Openlayers Javascript library:
+Openlayers Javascript library:
 http://openlayers.org/download/OpenLayers-2.11.zip
