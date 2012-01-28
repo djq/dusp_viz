@@ -7,7 +7,7 @@
 * Using spplot 
 
 
-## Basic commands for `R`
+## Basic commands for \R\
 
 This is a comment:
 
