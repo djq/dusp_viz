@@ -16,6 +16,13 @@ Urban data can have multiple dimensions of information. Conside the US Census da
 This is a comment:
 
 	# this line is ignored
+	
+First, we are going to start by installing a package:
+
+	install.packages('ggplot2')	
+
+Try this for `spplot` also.
+
 
 Loading a dataframe into `R`:
 
@@ -30,11 +37,7 @@ To access a column use the $ notation:
 
 	data$names
 
-Installing a package:
 
-	install.packages('ggplot2')	
-
-Try this for `spplot` also.
 
 ## ggplot2
 
