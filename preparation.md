@@ -29,4 +29,6 @@ Openlayers - this is a javascript library:
 
 * [Quick-R](http://www.statmethods.net/ ) 
 * [Openlayers Documentation]()
-* [QGIS Manual]()
+* [QGIS Manual](http://qgis.org/en/documentation/manuals.html)
+* [StackOverflow](http://stackoverflow.com/questions/tagged/r)
+* [Flowing Data](http://flowingdata.com/)
