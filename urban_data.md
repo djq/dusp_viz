@@ -19,9 +19,11 @@ Loading a dataframe into `R`:
 	data <- read.csv('pathToFile\file.csv')  # this assumes a csv file with headers
 	
 To see the top part of your data use the `head` command:
+
 	head(data)
 	
 To access a column use the $ notation:
+
 	data$names
 
 Installing a package:
