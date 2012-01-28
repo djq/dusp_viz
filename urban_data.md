@@ -5,7 +5,11 @@
 * Visualization approachs
 * Using ggplot2
 * Using spplot 
+* Spatial analysis
 
+## Premise
+
+Urban data can have multiple dimensions of information. Conside the US Census data which has several hundred fields. How can we explore patterns with only a general idea of what the data looks like?
 
 ## Basic commands for R
 
@@ -30,14 +34,25 @@ Installing a package:
 
 	install.packages('ggplot2')	
 
+Try this for `spplot` also.
 
 ## ggplot2
 
-[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analsis package for `R`. 
+[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analsis package for R. We are going to focus on using facet-plotting today. 
 
 
 ## spplot
 
+
+
 ## Class Data 
+
+Dataset for New York:
+
+* Energy:  By Zipcode
+* Buildings: 
+* Roads: 
+
+
 
 The datasets we will use will be avilable [here](http://)
