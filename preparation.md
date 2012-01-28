@@ -18,6 +18,7 @@ Here are some options for text-editors:
 * Linux: http://www.geany.org/
 
 Web-accessible space: 
+
 * www.dropbox.com 
 
 Openlayers - this is a javascript library: 
