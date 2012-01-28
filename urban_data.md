@@ -1,22 +1,41 @@
 # Overview of workshop
 
-* Basics: loading data, basic commands, installing packages, exporting images
-* Visualization: general approachs, 
+* Basics: loading data, installing packages, exporting images
+* Data management strategies
+* Visualization approachs
 * Using ggplot2
 * Using spplot 
-* 
 
-# Commands Used During Workshop
 
-Loading a dataframe into `R`
+## Basic commands for `R`
 
-	data <- read.csv('pathToFile\file.csv')  # this assumes a properly formatted csv file
+This is a comment:
+
+	# this line is ignored
+
+Loading a dataframe into `R`:
+
+	# a dataframe is similar to an excel-spreadsheet
+	data <- read.csv('pathToFile\file.csv')  # this assumes a csv file with headers
 	
-Data used for this class [here](http://)
+To see the top part of your data use the `head` command:
+	head(data)
 	
-In general this is a `code` snippet and indentation means that it is code
+To access a column use the $ notation:
+	data$names
 
-	code example
+Installing a package:
 
-## More detailed descriptions of commands
+	install.packages('ggplot2')	
 
+
+## ggplot2
+
+[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analsis package for `R`. 
+
+
+## spplot
+
+## Class Data 
+
+The datasets we will use will be avilable [here](http://)
