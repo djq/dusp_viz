@@ -3,9 +3,9 @@
 * Basics: loading data, installing packages, exporting images
 * Data management strategies
 * Visualization approachs
-* Using ggplot2
-* Using spplot 
-* Spatial analysis
+* ggplot2: small multiples
+* spplot: make quick maps
+* 
 
 ## Premise
 
