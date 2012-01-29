@@ -5,7 +5,7 @@
 * Visualization approachs
 * ggplot2: small multiples
 * spplot: make quick maps
-* 
+* Spatial Operations (if there is enough time)
 
 ## Premise
 
@@ -36,7 +36,7 @@ To see the top part of your data use the `head` command:
 	
 To access a column use the $ notation:
 
-	data$names
+	dataSample$colName
 	
 ### Try:
 * Calculate mean and standard deviation of all columns
@@ -51,12 +51,33 @@ To read in a `dbf` file you can use the following command:
 	library(foreign) 	# load a library that is installed by default
 	attributeTable <- read.dbf('pathToShapefile\shapefileName.dbf') # note this is to the `.dbf` part of the file. We are ignoring the spatial information
 
+The first shapefile we are using here is a sample of parcels from New York.
 
-
+	ny_parcels <- read.dbf('pathToShapefile\new_york_parcels.dbf')
+	
 
 ## ggplot2
 
-[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analsis package for R. We are going to focus on using facet-plotting today. 
+[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analsis package for R. We are going to focus on using some of the plotting functions, and illustrate facet-plotting. First load the library into your workspace:
+
+	library(ggplot2)
+	
+On the ggplot2 website you can see many different types of plots. The most basic is the `qplot()` function; the more complicated plotting function is `ggplot()`. First try using `qplot` to examine some of the NY data.
+
+	qplot()
+	
+You can make the same plot using `ggplot`
+
+	ggplot(data=ny_parcels, aes(res, tax)) + geom_point() 
+	
+You can use an almost identical command, but change what type of plot you want 
+	
+	ggplot(data=ny_parcels, aes(res, tax)) + geom_bar()
+	
+There are lots of different plot choices, but the data structure is very important. Essentially, the data frame should be long rather than wide. For example:
+
+	X | Y | Measurement_A | Measurement_B
+	1 | 3 |        4      |    2
 
 
 ## spplot
