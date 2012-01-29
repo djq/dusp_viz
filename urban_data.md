@@ -78,8 +78,23 @@ There are lots of different plot choices, but the data structure is very importa
 
 	X | Y | Measurement_A | Measurement_B
 	1 | 3 |        4      |    2
+	
+While it seems like that is less efficient for storing the information, it enables easy plotting in ggplot2. For example: 
 
+	ggplot(data=ny_parcels, aes(res, tax)) + geom_point(aes(colour = )) 
+	
+Finally, we will explore facet plotting. A facet is a grid of plots, organized by groups. In this example, the measurements `X` is plotted against `Y`, grouped by `boroughs:
 
+	ggplot(data=ny_parcels, aes(res, tax)) + facet_grid( ~.boroughs)
+	
+Try this for alternative measurements. You could also create the groups through a statistical operation. For example if you wanted to split up a particular measuremnt by quantiles:
+
+	quantile_values <- quantile(ny_parcels$tax) # calculate the quantile values for tax
+	ny_parcels$quintile_group <- ny_parcels$tax
+	
+	ind <- cut(ny_parcels$tax, quantile_values, include.lowest = TRUE)
+	split(y_parcels$tax, ind)
+		
 ## spplot
 
 
