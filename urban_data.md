@@ -27,21 +27,30 @@ Try this for `spplot` also.
 Loading data into a dataframe:
 
 	# a dataframe is similar to an excel-spreadsheet
-	data <- read.csv('pathToFile\file.csv')  # this assumes a csv file with headers
+	# `dataSample` is a variable; you can use any name here
+	dataSample <- read.csv('pathToFile\file.csv')  # this assumes a csv file with headers
 	
 To see the top part of your data use the `head` command:
 
-	head(data)
+	head(dataSample)
 	
 To access a column use the $ notation:
 
 	data$names
-
+	
 ### Try:
 * Calculate mean and standard deviation of all columns
 * Try plotting two columns against each other using `plot(x = data$ColName1, y = data$ColName2)`
 * Run `plot(data)`
 * Use the `subset` function. To use the help, type `help(subset)`
+
+## Reading infrormation from a shapefile
+
+To read in a `dbf` file you can use the following command:
+	
+	library(foreign) 	# load a library that is installed by default
+	attributeTable <- read.dbf('pathToShapefile\shapefileName.dbf') # note this is to the `.dbf` part of the file. We are ignoring the spatial information
+
 
 
 
