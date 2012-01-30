@@ -21,7 +21,7 @@ Web-accessible space:
 
 * www.dropbox.com 
 
-Openlayers - this is a javascript library: 
+Openlayers - this is a javascript library that we will use: 
 
 * http://openlayers.org/download/OpenLayers-2.11.zip
 
