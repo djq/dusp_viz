@@ -121,7 +121,7 @@ Load a dataframe of zipfiles for New York:
 
 	elec <- read.csv('data/NY_Zip_energy.csv')
 
-Now let's join this to tax-data, joining by zipcode keyword. I have aggregated the values from an NYC dataset, available (here)[http://nycopendata.socrata.com/Environmental-Sustainability/Electric-Consumption-by-ZIP-Code-2010/74cu-ncm4]
+Now let's join this to tax-data, joining by zipcode keyword. I have aggregated the values from an NYC dataset, available [here](http://nycopendata.socrata.com/Environmental-Sustainability/Electric-Consumption-by-ZIP-Code-2010/74cu-ncm4)
 		
 Examine `elec` dataframe. Merge using `ZipCode` (note that spelling is identical in both dataframes):
 
@@ -131,12 +131,16 @@ Try making a facet-plot by zipcode illustrating energy use.
 	
 ### spplot
 
-spplot
+`spplot` is another package in R that can be used for many spatial analyses. Here we are just using it to plot a shapefile.
+
+	library(spplot)
+	
+	
 
 
 
 
-## GoogleVis
+## GoogleVis (web-mapping package)
 
 Using R and a Google library (googleVis), you can generate a map from country level information. First install the following packages:
 
@@ -153,14 +157,14 @@ This example is from (spatialanalysis.co.uk)[http://spatialanalysis.co.uk/2011/0
 	
 	Map<- data.frame(select$Country.or.Area, select$Value)  # make a datrage with two columns
 	
-	names(Map)<- c("Country", "Percentage")					# 
+	names(Map)<- c("Country", "Percentage")					
 	
 	Geo=gvisGeoMap(Map, locationvar="Country", numvar="Percentage",	options=list(height=350, dataMode='regions'))
 	
 	plot(Geo)
 
 
-Caveats: (from the documentation)[http://code.google.com/p/google-motion-charts-with-r/] "In all cases Flash and an internet connection is required to view the visualisation output."
+Caveats: [from the documentation](http://code.google.com/p/google-motion-charts-with-r/) "In all cases Flash and an internet connection is required to view the visualisation output."
 
-Instead of using regions, you can also use cities (see Googles (city-code)[http://code.google.com/apis/adwords/docs/appendix/cities_world.html] index)
+Instead of using regions, you can also use cities (see Googles [city-code](http://code.google.com/apis/adwords/docs/appendix/cities_world.html) index)
 
