@@ -150,7 +150,7 @@ Now, load the spatial piece of `NY_Zip_Energy` (the `.shp`):
 	
 And also load the attribute table for easy perusal:
 
-	att <- read.dbf('data/ny_zip/NY_Zip_Energy.dbf') # load data
+	att <- read.dbf('data/ny_zip/NY_Zip_Energy.dbf') 
 	
 You can make a plot using the following commands:
 	  
