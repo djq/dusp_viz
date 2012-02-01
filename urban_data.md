@@ -91,11 +91,13 @@ Put everything together (a little over the top and redundant, but still interest
 
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point(aes(size = ResArea, colour=NumFloors))
 	
-Another plotting technique:
+#### Grouping data
+
+Boxplots:
 
 	ggplot(data=mn, aes(LandUse, YearBuilt)) + geom_boxplot()
 	
-Finally, let's group these plots by a category. `ggplot2` refers to this as 'facet plotting'. Rexamining the data one more time:
+Rexamining the data one more time, we will use a facet plots to explore patterns amongst groups:
 
 	head(mn)
 	summary(mn)

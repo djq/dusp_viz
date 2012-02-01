@@ -42,14 +42,14 @@ When you want to use javascript in your browser you need to include the file som
 The exact syntax would be as follows:
 	
 	<!-- This is a comment in HTML-->
-	<script type="text/javascript" src="http://myfolder/OpenLayers.js" ></script>
+	<script type="text/javascript" src="pathToFile/OpenLayers.js" ></script>
 	
 Here we just linked the `OpenLayers` library to our `HTML` page. Comments in Javascript are as follows:
 
 	// This is a comment in javascript
 	
 
-I recommend linking to your javascript file outside of your `HTML` file, as it is easier to view (you can have `Javascript` pasted in with the `HTML`). I also suggest that you install [FireBug](http://getfirebug.com/) so that you can debug your webpages.	A very useful feature in firebug is the `console.log()` function, and the interactive terminal.
+I recommend linking to your javascript file outside of your `HTML` file, as it is easier to view. You can have `Javascript` pasted in with the `HTML` but it gets messy quickly. I also suggest that you install [FireBug](http://getfirebug.com/) so that you can debug your webpages. A very useful feature in firebug is the `console.log()` function, and the interactive terminal.
 
 ## Browser/Client interaction
 
@@ -149,7 +149,10 @@ A basic map using [OpenStreetMap](http://openstreetmap.org)
 		}
 
 
-#### Try setting this to be centered around MIT. 
+#### Try 
+
+* setting this to be centered around MIT
+* changing the zoom scale so it focuses on our building
 
 ### Map 2: Several different basemaps
 
