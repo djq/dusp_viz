@@ -176,7 +176,7 @@ Fine tuning:
 	
 	spplot(demo, c("kWh_res","kWh_com"), col.regions = rainbow(100, start = 4/6, end = 1)) # tweaking colours
 
-Scale-bars and further refinement are not very easy to include. My preference would be to use another program for organizing these  details using another program. However, there are a few approaches you can use:
+Scale-bars and further refinement are not very easy to include. My preference is to use another program for organizing these  details using another program. However, there are a few approaches you can use for adjusting the colors:
 
 	library(classInt)
 	library(RColorBrewer)
