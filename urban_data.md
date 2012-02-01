@@ -17,7 +17,7 @@ First, we are going to start by installing a package:
 
 	install.packages('ggplot2')	
 
-Do this for `spplot` also.
+Do this for `sp` and `maptools` also.
 
 Loading data into a dataframe:
 
@@ -144,24 +144,37 @@ Load in the NY zipcode shapefile and the following libraries:
 	library(sp)
 	library(maptools) 
 	
-	demo <- readShapePoly('data/ny_zip/NY_Zip_Energy.shp') # load data
+Now, load the spatial piece of NY_Zip_Energy (the `.shp):
+	
+	demo <- readShapePoly('data/ny_zip/NY_Zip_Energy.shp') 
+	
+And also load the attribute table for easy perusal:
+
 	att <- read.dbf('data/ny_zip/NY_Zip_Energy.dbf') # load data
+	
+You can make a plot using the following commands:
 	  
 	spplot(demo, "kWh_res") # residential
 	spplot(demo, "kWh_com") # commercial
 	spplot(demo, "kWh_res", scales=list(draw = F), colorkey=F) # remove scales and key/legend
 	
-	ny_res_energy <- spplot(demo, "kWh_res") # residential	
+To save the plot (as a pdf, for example):
+
+	ny_res_energy <- spplot(demo, "kWh_res") # store the plot	
 	  
-	  pdf('ny_res_energy.pdf',height=5,width=5) # set up pdf
-	  print(ny_res_energy)    # print
-	  dev.off()               # close the PDF file
+	pdf('ny_res_energy.pdf',height=5,width=5) # set up pdf
+	print(ny_res_energy)    # print
+	dev.off()               # close the PDF file
+	
+Fine tuning:
 	
 	spplot(demo, c("kWh_res","kWh_com")) # colour scale is a bit hard to read as one map has much larger values than the other
 	
 	spplot(demo, c("kWh_res","kWh_com"), names.attr = c("Residential","Commercial")) # change names
 	
 	spplot(demo, c("kWh_res","kWh_com"), col.regions = rainbow(100, start = 4/6, end = 1)) # tweaking colours
+
+Scale-bars and further refinement are not easy to include.
 	
 [spplot references](http://r-spatial.sourceforge.net/gallery/)
 
