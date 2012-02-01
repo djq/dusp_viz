@@ -263,7 +263,7 @@ From the Guardian:
 	</html>
 
 
-Using the fustion table builder you can explore another dataset:
+Using the fusion table builder you can explore other datasets:
 
 	http://gmaps-samples.googlecode.com/svn/trunk/fusiontables/fusiontableslayer_builder.html
 	
