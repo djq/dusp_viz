@@ -139,7 +139,7 @@ Try making a facet-plot by zipcode illustrating energy use.
 
 `sp` is another package in R that can be used for many spatial analyses. Here we are just using it to plot a shapefile.
 
-	library(spplot)
+	library(sp)
 	
 We are not focusing on beautiful cartography with this package. We just want to make quick plots of the data that are understandable. You can find some useful spplot references [here](http://r-spatial.sourceforge.net/gallery/)
 
