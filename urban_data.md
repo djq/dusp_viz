@@ -5,7 +5,7 @@
 * spplot: plot quick maps
 
 
-## Datasets
+### Datasets
 The datasets we will use are available [here](https://github.com/djq/dusp_viz/blob/master/data.zip?raw=true)
 
 
