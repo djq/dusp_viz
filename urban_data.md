@@ -6,7 +6,7 @@
 
 
 ## Datasets
-The datasets we will use are available [here](https://github.com/djq/dusp_viz/blob/master/data.zip)
+The datasets we will use are available [here](https://github.com/djq/dusp_viz/blob/master/data.zip?raw=true)
 
 
 ## Basic commands for R
