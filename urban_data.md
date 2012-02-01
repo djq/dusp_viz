@@ -3,6 +3,7 @@
 * Basics: interface, loading data, installing packages
 * `ggplot2`: visualization and exploration
 * `sp` and `maptools`: plot quick maps
+* `googleVis` (if there is time, othewise will be covered in the afternooon)
 
 ### Datasets
 The datasets we will use are available [here](https://github.com/djq/dusp_viz/blob/master/data.zip?raw=true). Make a folder for this class and unzip them there.
@@ -175,12 +176,29 @@ Fine tuning:
 	
 	spplot(demo, c("kWh_res","kWh_com"), col.regions = rainbow(100, start = 4/6, end = 1)) # tweaking colours
 
-Scale-bars and further refinement are not easy to include. My preference would be to use another program for organizing these  details using another program.
+Scale-bars and further refinement are not very easy to include. My preference would be to use another program for organizing these  details using another program. However, there are a few approaches you can use:
+
+	library(classInt)
+	library(RColorBrewer)
+	pal = brewer.pal(7,"Greens")
+	
+	# demo = readOGR("data/ny_zip/", "NY_Zip_Energy") # alternative method of reading in data
+	
+	brks.qt = classIntervals(NE$Frac_Bach, n = 7, style = "quantile")
+	brks.jk = classIntervals(NE$Frac_Bach, n = 7, style = "jenks")
+	brks.eq = classIntervals(NE$Frac_Bach, n = 7, style = "equal")
+	
+	# Example of one of the map plots
+	spplot(demo, "kWh_res", at=brks.eq$brks, col.regions=pal, col="transparent", main = list(label="Equal breaks"))
+
+[Source](http://gis.stackexchange.com/questions/3310/what-is-the-most-useful-spatial-r-trick)
 
 #### Try:
 
+* Changing interval type of breaks
 * Plotting the tax lots for one ZipCode, by one dimension
 * Making a grid of plots, using several measurements
+
 	
 
 
