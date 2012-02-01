@@ -131,9 +131,9 @@ Examine `elec` dataframe. Merge using `ZipCode` (note that spelling is identical
 	
 Try making a facet-plot by zipcode illustrating energy use.	
 	
-## spplot
+## sp
 
-`spplot` is another package in R that can be used for many spatial analyses. Here we are just using it to plot a shapefile.
+`sp` is another package in R that can be used for many spatial analyses. Here we are just using it to plot a shapefile.
 
 	library(spplot)
 	
