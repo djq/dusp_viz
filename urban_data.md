@@ -33,11 +33,11 @@ To access a column use the $ notation:
 
 	dataSample$colName
 	
-### Try:
+#### Try:
 * Calculating the mean and standard deviation of all columns
 * Examining the output of `summary(dataSample)`
 
-## Reading information from a shapefile
+### Reading information from a shapefile
 
 To read in a `dbf` file you can use the following command:
 	
@@ -131,7 +131,7 @@ Examine `elec` dataframe. Merge using `ZipCode` (note that spelling is identical
 	
 Try making a facet-plot by zipcode illustrating energy use.	
 	
-### spplot
+## spplot
 
 `spplot` is another package in R that can be used for many spatial analyses. Here we are just using it to plot a shapefile.
 
