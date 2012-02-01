@@ -38,14 +38,15 @@ To access a column use the $ notation:
 	dataSample$colName
 	
 ### Try:
-* Calculate mean and standard deviation of all columns
-* Examine the output of `summary(dataSample)`
+* Calculating the mean and standard deviation of all columns
+* Examining the output of `summary(dataSample)`
 
 ## Reading information from a shapefile
 
 To read in a `dbf` file you can use the following command:
 	
-	library(foreign) 	# load a library that is installed by default
+	library(foreign) 												# load a library that is installed by default in R
+	setwd('/Users/djq/Dropbox/dusp_viz')							# set your working directory
 	attributeTable <- read.dbf('pathToShapefile\shapefileName.dbf') # note this is to the `.dbf` part of the file. We are ignoring the spatial information
 
 The first shapefile we are using here is a sample of tax-assessors parcels from New York. Open it in QGIS to examine it, then read in the attribute table:
