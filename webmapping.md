@@ -198,7 +198,7 @@ A more sophisticated example here:
 
 ### Map 3: Loading KML
 
-
+[NYC Demo](http://project.wnyc.org/news-maps/hurricane-zones/hurricane-zones.html)
 
 
 ### Map 4: Fusion Tables
@@ -229,8 +229,44 @@ Here, we will use the Google API directly to make a map using fusion tables:
 	  </body>
 	</html>
 
-Source: [The Bay Citizen](http://s.tt/129ix)
+Source: [The Bay Citizen](http://www.baycitizen.org/data/bike-accidents/)
 
+From the Guardian:
+
+	<html style='height: 100%'>
+	<head>
+	<script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false'></script>
+	<script type='text/javascript'>
+	function initialize() {
+		map = new google.maps.Map(document.getElementById('map_canvas'), {
+			center: new google.maps.LatLng(51.502758957640296, -0.00823974609375),
+			zoom: 12,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		});
+	
+	layer = new google.maps.FusionTablesLayer({
+		map: map,
+		heatmap: { enabled: false },
+		query: {
+			select: "col4",
+			from: "628653",
+			where: ""
+		}
+		});
+	}
+	
+	</script>
+	</head>
+	<body onload='initialize()' style='height: 100%; margin: 0px; padding: 0px'>
+	<div id="map_canvas" style='height: 100%'></div>
+	</body>
+	</html>
+
+
+Using the fustion table builder you can explore another dataset:
+
+	http://gmaps-samples.googlecode.com/svn/trunk/fusiontables/fusiontableslayer_builder.html
+	
 
 
 ## Approaches for Larger Datasets
