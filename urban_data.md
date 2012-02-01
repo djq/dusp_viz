@@ -82,7 +82,7 @@ Now add a third dimension. We will use the amount of residential area to make th
 
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point(aes(colour = ResArea))
 	
-Now add a third dimension. We will use the amount of residential area to make the point proportional to `ResArea`
+Illustrate this third dimension using another approach. Use the amount of residential area to make the point proportional to `ResArea`
 
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point(aes(size = ResArea))
 	
