@@ -231,7 +231,7 @@ Here, we will use the Google API directly to make a map using fusion tables:
 
 Source: [The Bay Citizen](http://www.baycitizen.org/data/bike-accidents/)
 
-From the Guardian:
+From the [Guardian](http://www.google.com/fusiontables/embedviz?viz=MAP&q=select+col0%2C+col1%2C+col2%2C+col3%2C+col4%2C+col5%2C+col6%2C+col7%2C+col8%2C+col9%2C+col10%2C+col11%2C+col12%2C+col13%2C+col14%2C+col15%2C+col16%2C+col17%2C+col18%2C+col19%2C+col20%2C+col21%2C+col22+from+628653+&h=false&lat=51.502758957640296&lng=-0.00823974609375&z=12&t=1&l=col0):
 
 	<html style='height: 100%'>
 	<head>
