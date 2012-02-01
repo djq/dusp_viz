@@ -108,7 +108,8 @@ Now, make a plot by these groups:
 	# facet wrap by zipcode
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point() + facet_wrap(~ZipCode, nrow = 2)
 	
-Try extending these plots by adding the previous dimensions, ilustrated by size or color.
+#### Try:
+* extending these plots by adding the previous dimensions, ilustrated by size or color.
 
 ### Saving your plots
 	
@@ -123,7 +124,7 @@ Load a dataframe of zipfiles for New York:
 
 	elec <- read.csv('data/NY_Zip_energy.csv')
 
-Now let's join this to tax-data, joining by zipcode keyword. I have aggregated the values from an NYC dataset, available [here](http://nycopendata.socrata.com/Environmental-Sustainability/Electric-Consumption-by-ZIP-Code-2010/74cu-ncm4)
+Now let's join this to tax-data, joining by zipcode keyword. I have aggregated the values from an NYC dataset, available [here](http://nycopendata.socrata.com/Environmental-Sustainability/Electric-Consumption-by-ZIP-Code-2010/74cu-ncm4). (Note: Spatial joins are possible in `R` but are not covering them in this workshop.)
 		
 Examine `elec` dataframe. Merge using `ZipCode` (note that spelling is identical in both dataframes):
 
@@ -137,7 +138,7 @@ Try making a facet-plot by zipcode illustrating energy use.
 
 	library(spplot)
 	
-We are not focusing on beautiful cartography with this package. We just want to make quick plots of the data that are understandable.
+We are not focusing on beautiful cartography with this package. We just want to make quick plots of the data that are understandable. You can find some useful spplot references [here](http://r-spatial.sourceforge.net/gallery/)
 
 Load in the NY zipcode shapefile and the following libraries:
 	
@@ -174,9 +175,14 @@ Fine tuning:
 	
 	spplot(demo, c("kWh_res","kWh_com"), col.regions = rainbow(100, start = 4/6, end = 1)) # tweaking colours
 
-Scale-bars and further refinement are not easy to include. My preference would be to use another program for organizing these  details.
+Scale-bars and further refinement are not easy to include. My preference would be to use another program for organizing these  details using another program.
+
+#### Try:
+
+* Plotting the tax lots for one ZipCode, by one dimension
+* Making a grid of plots, using several measurements
 	
-[spplot references](http://r-spatial.sourceforge.net/gallery/)
+
 
 
 
