@@ -74,7 +74,7 @@ Now replot:
 	
 	qplot(data=mn, x=YearBuilt, y=BldgArea)
 	
-You can make the same plot using `ggplot`
+You can make the same plot using `ggplot`. There are more ways of customizing things using `ggplot`
 
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point() 	
 	
@@ -144,7 +144,7 @@ Load in the NY zipcode shapefile and the following libraries:
 	library(sp)
 	library(maptools) 
 	
-Now, load the spatial piece of NY_Zip_Energy (the `.shp):
+Now, load the spatial piece of `NY_Zip_Energy` (the `.shp`):
 	
 	demo <- readShapePoly('data/ny_zip/NY_Zip_Energy.shp') 
 	
