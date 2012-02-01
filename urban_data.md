@@ -4,10 +4,8 @@
 * ggplot2: visualization and exploration
 * spplot: plot quick maps
 
-
 ### Datasets
-The datasets we will use are available [here](https://github.com/djq/dusp_viz/blob/master/data.zip?raw=true)
-
+The datasets we will use are available [here](https://github.com/djq/dusp_viz/blob/master/data.zip?raw=true). Make a folder for this class and unzip them there.
 
 ## Basic commands for R
 
@@ -56,7 +54,7 @@ We are going to focus on exploring non-spatial patterns first.
 
 ## ggplot2
 
-[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analsis package for R. We are going to focus on using some of the plotting functions, and illustrate facet-plotting. First load the library into your workspace:
+[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analysis package for R. We are going to focus on using some of the plotting functions, and illustrate facet-plotting. First load the library into your workspace:
 
 	library(ggplot2)	
 	
@@ -92,6 +90,10 @@ Put everything together (a little over the top and redundant, but still interest
 
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point(aes(size = ResArea, colour=NumFloors))
 	
+Another plotting technique:
+
+	ggplot(data=mn, aes(LandUse, YearBuilt)) + geom_boxplot()
+	
 Finally, let's group these plots by a category. `ggplot2` refers to this as 'facet plotting'. Rexamining the data one more time:
 
 	head(mn)
@@ -106,7 +108,7 @@ Now, make a plot by these groups:
 	# facet wrap by zipcode
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point() + facet_wrap(~ZipCode, nrow = 2)
 	
-Try extending these plots bya dding the previous dimensions, ilustrated by size or color.
+Try extending these plots by adding the previous dimensions, ilustrated by size or color.
 
 ### Saving your plots
 	

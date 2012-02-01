@@ -1,11 +1,34 @@
 ## Overview
 
-* Structure of a webpage: html, javascript
+* Structure of a webpage: HTML & javascript
 * Browser/Client interaction
 * GoogleVis
 * Openlayers
 * Fusion Tables
 * More things....
+
+## HTML and Javascript
+
+`HTM`L elements are the basic building-blocks of static webpages.
+	
+	<HTML>
+		<HEAD>
+		</HEAD>
+		
+		<BODY>
+		</BODY>	
+	
+	</HTML>
+
+`Javascript` (not Java!) is a dynamic scripting language that can run in your web-browser:
+
+	var x;
+	x = 10
+
+We will be using `Javascript` today. 	
+
+## Browser/Client interaction
+
 
 
 ## GoogleVis (web-mapping package)
