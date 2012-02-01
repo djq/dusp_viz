@@ -1,11 +1,9 @@
 # Overview of workshop
 
-* Basics: loading data, installing packages, exporting images
-* Data management strategies
-* Visualization approachs
-* ggplot2: small multiples
-* spplot: make quick maps
-* Spatial Operations (if there is enough time)
+* Basics: interface, loading data, installing packages
+* ggplot2: visualization and exploration
+* spplot: plot quick maps
+
 
 ## Datasets
 The datasets we will use are available [here](http://)
@@ -47,7 +45,7 @@ To read in a `dbf` file you can use the following command:
 	
 	library(foreign) 												# load a library that is installed by default in R
 	setwd('/Users/djq/Dropbox/dusp_viz')							# set your working directory
-	attributeTable <- read.dbf('pathToShapefile\shapefileName.dbf') # note this is to the `.dbf` part of the file. We are ignoring the spatial information
+	attributeTable <- read.dbf('pathToShapefile\shapefileName.dbf') # note this is to the '.dbf' part of the shapefile. We are ignoring the spatial information
 
 The first shapefile we are using here is a sample of tax-assessors parcels from New York. Open it in QGIS to examine it, then read in the attribute table:
 
@@ -117,8 +115,19 @@ Try extending these plots bya dding the previous dimensions, ilustrated by size 
 	ggsave(plot, file="plot.pdf", width=4, height=4)
 	
 
-###	
+###	Joining more data to a dataframe
+
+Load a dataframe of zipfiles for New York:
+
+	elec <- read.csv('data/NY_Zip_energy.csv')
+
+Now let's join this to tax-data, joining by zipcode keyword. I have aggregated the values from an NYC dataset, available (here)[http://nycopendata.socrata.com/Environmental-Sustainability/Electric-Consumption-by-ZIP-Code-2010/74cu-ncm4]
+		
+Examine `elec` dataframe. Merge using `ZipCode` (note that spelling is identical in both dataframes):
+
+	ny_data <- merge(mn, elec, 'ZipCode')
 	
+Try making a facet-plot by zipcode illustrating energy use.	
 	
 ### spplot
 
