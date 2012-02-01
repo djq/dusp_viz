@@ -51,6 +51,8 @@ Here we just linked the `OpenLayers` library to our `HTML` page. Comments in Jav
 
 I recommend linking to your javascript file outside of your `HTML` file, as it is easier to view. You can have `Javascript` pasted in with the `HTML` but it gets messy quickly. I also suggest that you install [FireBug](http://getfirebug.com/) so that you can debug your webpages. A very useful feature in firebug is the `console.log()` function, and the interactive terminal.
 
+	example: file:///Users/djq/Dropbox/Public/duspViz/map0.html
+
 ## Browser/Client interaction
 
 * Quick discussion
