@@ -1,11 +1,11 @@
 ## Overview
 
-* Structure of a webpage: HTML & javascript
+* Structure of a webpage: HTML & Javascript
 * Browser/Client interaction
 * GoogleVis (R package)
 * Openlayers
 * Fusion Tables
-* More things....
+* Approaches for larger datasets
 
 ## HTML and Javascript
 
@@ -85,8 +85,9 @@ Caveats: [from the documentation](http://code.google.com/p/google-motion-charts-
 
 ## Openlayers
 
-First, download and unzip the openlayers library to your local directory (library)[http://openlayers.org/download/OpenLayers-2.11.zip]. You can link to it online, but it's quicker to save it locally. `OpenLayers` is a great library, but the documentation is a little sparse. The (examples)[http://openlayers.org/dev/examples/] are very useful.
+First, download and unzip the openlayers library to your local directory (library)[http://openlayers.org/download/OpenLayers-2.11.zip]. You can link to it online, but it's quicker to save it locally (you also have to copy the folders 'theme' and 'img' also.  `OpenLayers` is a great library, but the documentation can be a little sparse. The (examples)[http://openlayers.org/dev/examples/] are very useful.
 
+### Map 1: Basic Map
 A basic map using [OpenStreetMap](http://openstreetmap.org)
 `HTML`:
 
@@ -120,6 +121,8 @@ A basic map using [OpenStreetMap](http://openstreetmap.org)
 
 `Javascript`:
 
+	var map;
+	
 	//This function makes the map
 	function init(){    		
 			
@@ -146,12 +149,20 @@ A basic map using [OpenStreetMap](http://openstreetmap.org)
 		}
 
 
+#### Try setting this to be centered around MIT. 
+
+### Map 2: Several different basemaps
+
+Add the following line to your `HTML` file so that you can use google as a basemap:
+
+	<script src="http://maps.google.com/maps/api/js?v=3.5&amp;sensor=false"></script>
+
 A more sophisticated example here:
 
 	var map;
 	
 	function init() {
-		map = new OpenLayers.Map('map');
+		map = new OpenLayers.Map('mapCanvas');
 		map.addControl(new OpenLayers.Control.LayerSwitcher());
 		
 		var gphy = new OpenLayers.Layer.Google(
@@ -178,17 +189,51 @@ A more sophisticated example here:
 		map.setCenter(new OpenLayers.LonLat(10.2, 48.9).transform(
 			new OpenLayers.Projection("EPSG:4326"),
 			map.getProjectionObject()
-		), 5);
+		), 5);		
 		
-		// add behavior to html
-		var animate = document.getElementById("animate");
-		animate.onclick = function() {
-			for (var i=map.layers.length-1; i>=0; --i) {
-				map.layers[i].animationEnabled = this.checked;
-			}
-		};
 	}
 
+### Map 3: Loading KML
+
+
+
+
+### Map 4: Fusion Tables
+
+The benefit of using `Openlayers` is that there is a lot of flexibility regarding your base-map, and you know that the functions will work in a years time if you save the JS library locally. This is not the case with commercial JS APIs. 
+
+I haven't fully explored how to use Fusion Tables with OpenLayers but it is probably possible.....
+Here, we will use the Google API directly to make a map using fusion tables:
+
+	<html style='height: 100%'>
+	  <head>
+		<script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false'></script>
+		<script type='text/javascript'>
+		  function initialize() {
+			var bc_office = new google.maps.LatLng(37.788901, -122.403806);
+			var map = new google.maps.Map(document.getElementById('accident-map'), {
+			  center: bc_office,
+			  zoom: 13,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			});
+			var accidents_layer = new google.maps.FusionTablesLayer(433634);
+			accidents_layer.setMap(map);
+		  }
+		</script>
+	  </head>
+	  <body onload='initialize()' style='height: 100%; margin: 0px; padding: 0px'>
+		<div id="accident-map" style='height: 100%'></div>
+	  </body>
+	</html>
+
+Source: [The Bay Citizen](http://s.tt/129ix)
+
+
+
+## Approaches for Larger Datasets
+
+* PostGreSQL/PostGIS
+* Spatial Querying of data
 
 
 

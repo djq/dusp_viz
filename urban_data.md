@@ -1,8 +1,8 @@
 # Overview of workshop
 
 * Basics: interface, loading data, installing packages
-* ggplot2: visualization and exploration
-* spplot: plot quick maps
+* `ggplot2`: visualization and exploration
+* `sp` and `maptools`: plot quick maps
 
 ### Datasets
 The datasets we will use are available [here](https://github.com/djq/dusp_viz/blob/master/data.zip?raw=true). Make a folder for this class and unzip them there.
@@ -139,9 +139,33 @@ Try making a facet-plot by zipcode illustrating energy use.
 	
 We are not focusing on beautiful cartography with this package. We just want to make quick plots of the data that are understandable.
 
-Load in the NY zipcode shapefile:
-
+Load in the NY zipcode shapefile and the following libraries:
 	
+	library(sp)
+	library(maptools) 
+	
+	demo <- readShapePoly('data/ny_zip/NY_Zip_Energy.shp') # load data
+	att <- read.dbf('data/ny_zip/NY_Zip_Energy.dbf') # load data
+	  
+	spplot(demo, "kWh_res") # residential
+	spplot(demo, "kWh_com") # commercial
+	spplot(demo, "kWh_res", scales=list(draw = F), colorkey=F) # remove scales and key/legend
+	
+	ny_res_energy <- spplot(demo, "kWh_res") # residential	
+	  
+	  pdf('ny_res_energy.pdf',height=5,width=5) # set up pdf
+	  print(ny_res_energy)    # print
+	  dev.off()               # close the PDF file
+	
+	spplot(demo, c("kWh_res","kWh_com")) # colour scale is a bit hard to read as one map has much larger values than the other
+	
+	spplot(demo, c("kWh_res","kWh_com"), names.attr = c("Residential","Commercial")) # change names
+	
+	spplot(demo, c("kWh_res","kWh_com"), col.regions = rainbow(100, start = 4/6, end = 1)) # tweaking colours
+	
+[spplot references](http://r-spatial.sourceforge.net/gallery/)
+
+
 
 	
 
