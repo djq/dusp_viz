@@ -63,7 +63,7 @@ Using R and a Google library (googleVis), you can generate a map from country le
 	install.packages('RJSONIO')
 	install.packages('googleVis')
 
-This example is from (spatialanalysis.co.uk)[http://spatialanalysis.co.uk/2011/02/using-r-to-map-with-google-chart-tools/], with very minor modifications. Use the dataset `UN_data.csv`:
+This example is from [spatialanalysis.co.uk](http://spatialanalysis.co.uk/2011/02/using-r-to-map-with-google-chart-tools/), with very minor modifications. Use the dataset `UN_data.csv`:
 
 	library(googleVis)										# attach the library
 	
@@ -85,7 +85,7 @@ Caveats: [from the documentation](http://code.google.com/p/google-motion-charts-
 
 ## Openlayers
 
-First, download and unzip the openlayers library to your local directory (library)[http://openlayers.org/download/OpenLayers-2.11.zip]. You can link to it online, but it's quicker to save it locally (you also have to copy the folders 'theme' and 'img' also.  `OpenLayers` is a great library, but the documentation can be a little sparse. The (examples)[http://openlayers.org/dev/examples/] are very useful.
+First, download and unzip the openlayers library to your local directory [library](http://openlayers.org/download/OpenLayers-2.11.zip). You can link to it online, but it's quicker to save it locally (you also have to copy the folders 'theme' and 'img' also.  `OpenLayers` is a great library, but the documentation can be a little sparse. The [examples](http://openlayers.org/dev/examples/) are very useful.
 
 ### Map 1: Basic Map
 A basic map using [OpenStreetMap](http://openstreetmap.org)
