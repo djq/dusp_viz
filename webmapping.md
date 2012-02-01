@@ -65,18 +65,19 @@ Using R and a Google library (googleVis), you can generate a map from country le
 
 This example is from [spatialanalysis.co.uk](http://spatialanalysis.co.uk/2011/02/using-r-to-map-with-google-chart-tools/), with very minor modifications. Use the dataset `UN_data.csv`:
 
-	library(googleVis)										# attach the library
-	
+	library(googleVis)										# attach the library	
 	input<- read.csv("data.csv")							# load the data	
 	
-	select<- input[which(input$Subgroup=="Total 5-14 yr"),]	# get all values from "input" where < Subgroup=="Total 5-14 yr" >
+Run the following to select the variables that you are interested in:
+
+	select<- input[which(input$Subgroup=="Total 5-14 yr"),]	# get all values from "input" where < Subgroup=="Total 5-14 yr" >	
+	Map<- data.frame(select$Country.or.Area, select$Value)  # make a dataframe with two columns from the previous selection
 	
-	Map<- data.frame(select$Country.or.Area, select$Value)  # make a datrage with two columns
+	names(Map)<- c("Country", "Percentage")					# change the names in the dataframe	
 	
-	names(Map)<- c("Country", "Percentage")					
-	
-	Geo=gvisGeoMap(Map, locationvar="Country", numvar="Percentage",	options=list(height=350, dataMode='regions'))
-	
+Generate the map, which will open in your browser:
+
+	Geo=gvisGeoMap(Map, locationvar="Country", numvar="Percentage",	options=list(height=350, dataMode='regions'))		
 	plot(Geo)
 	
 Instead of using regions, you can also use cities (see Googles [city-code](http://code.google.com/apis/adwords/docs/appendix/cities_world.html) index)
@@ -102,8 +103,7 @@ A basic map using [OpenStreetMap](http://openstreetmap.org)
 			<link rel="stylesheet" href="css/openlayers.css" type="text/css"> 
 				
 			<!-- ########################## JS Libraries ########################## -->       
-			<script type="text/javascript" src="libraries/OpenLayers.js"></script>	    	<!-- OpenLayers  -->
-			<script type="text/javascript" src="libraries/proj4js-combined.js"></script>   	<!-- proj4  -->
+			<script type="text/javascript" src="libraries/OpenLayers.js"></script>	    	<!-- OpenLayers  -->			
 			
 			<!-- ########################## MY SCRIPTS ########################## -->
 			<script type="text/javascript" src="js/initialize.js"></script>			
