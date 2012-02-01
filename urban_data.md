@@ -26,7 +26,7 @@ Do this for `spplot` also.
 Loading data into a dataframe:
 
 	# a dataframe is similar to an excel-spreadsheet
-	# `dataSample` is a variable; you can use any name here
+	# 'dataSample' is a variable; you can use any name here
 	dataSample <- read.csv('pathToFile\file.csv')  # this assumes a csv file with headers
 	
 To see the top part of your data use the `head` command:
@@ -58,24 +58,23 @@ We are going to focus on exploring non-spatial patterns first.
 
 ## ggplot2
 
-[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analsis package for R. We are going to focus on using some of the plotting functions, and illustrate facet-plotting. First load the following libraries into your workspace:
+[ggplot2](http://had.co.nz/ggplot2/) is a visualization and analsis package for R. We are going to focus on using some of the plotting functions, and illustrate facet-plotting. First load the library into your workspace:
 
-	library(ggplot2)
-	library(foreign)
+	library(ggplot2)	
 	
 On the ggplot2 website you can see many different types of plots. The most basic is the `qplot()` function; the more complicated plotting function is `ggplot()`. First try using `qplot` to examine some of the NY data.
 
 	qplot(data=mn, x=YearBuilt, y=BldgArea)
 	
-This shoes one huge value on the y-axis. Lets remove it (ignoring the reasoning)
+This shows one huge value on the y-axis. Lets remove it (ignoring the reasoning)
 
-	mn <- subset(mn, mn$BldgArea < 1e7)
+	mn <- subset(mn, mn$BldgArea < 1e7)		# we are overwriting the dataframe 'mn'
 
-There also several 0 year values. remove them too
+There also several 0 year values - remove them too
 	
 	mn <- subset(mn, mn$YearBuilt != 0)
 
-# now replot
+Now replot:
 	
 	qplot(data=mn, x=YearBuilt, y=BldgArea)
 	
@@ -91,7 +90,7 @@ Now add a third dimension. We will use the amount of residential area to make th
 
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point(aes(size = ResArea))
 	
-# put everything together (a little over the top and redundant, but still interesting)
+Put everything together (a little over the top and redundant, but still interesting)
 
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point(aes(size = ResArea, colour=NumFloors))
 	
