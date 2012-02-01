@@ -174,7 +174,7 @@ Fine tuning:
 	
 	spplot(demo, c("kWh_res","kWh_com"), col.regions = rainbow(100, start = 4/6, end = 1)) # tweaking colours
 
-Scale-bars and further refinement are not easy to include.
+Scale-bars and further refinement are not easy to include. My preference would be to use another program for organizing these  details.
 	
 [spplot references](http://r-spatial.sourceforge.net/gallery/)
 
