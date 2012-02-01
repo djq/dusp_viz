@@ -191,7 +191,7 @@ Scale-bars and further refinement are not very easy to include. My preference wo
 	# Example of one of the map plots
 	spplot(demo, "kWh_res", at=brks.eq$brks, col.regions=pal, col="transparent", main = list(label="Equal breaks"))
 
-[Source](http://gis.stackexchange.com/questions/3310/what-is-the-most-useful-spatial-r-trick)
+This example slighlty modified from [here](http://gis.stackexchange.com/questions/3310/what-is-the-most-useful-spatial-r-trick)
 
 #### Try:
 
