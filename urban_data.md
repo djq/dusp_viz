@@ -62,13 +62,13 @@ On the ggplot2 website you can see many different types of plots. The most basic
 
 	qplot(data=mn, x=YearBuilt, y=BldgArea)
 	
-This shows one huge value on the y-axis. Lets remove it (ignoring the reasoning)
+This shows one huge value on the y-axis. Lets remove it (ignoring the underlying reasoning)
 
 	mn <- subset(mn, mn$BldgArea < 1e7)		# we are overwriting the dataframe 'mn'
 
 There also several 0 year values - remove them too
 	
-	mn <- subset(mn, mn$YearBuilt != 0)
+	mn <- subset(mn, mn$YearBuilt != 0)		# '!=' means 'does not equal'
 
 Now replot:
 	
