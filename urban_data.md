@@ -23,7 +23,7 @@ Loading data into a dataframe:
 
 	# a dataframe is similar to an excel-spreadsheet
 	# 'dataSample' is a variable; you can use any name here
-	dataSample <- read.csv('pathToFile\file.csv')  # this assumes a csv file with headers
+	dataSample <- read.csv('pathToFile/file.csv')  # this assumes a csv file with headers
 	
 To see the top part of your data use the `head` command:
 
@@ -43,7 +43,7 @@ To read in a `dbf` file you can use the following command:
 	
 	library(foreign) 												# load a library that is installed by default in R
 	setwd('/Users/djq/Dropbox/dusp_viz')							# set your working directory
-	attributeTable <- read.dbf('pathToShapefile\shapefileName.dbf') # note this is to the '.dbf' part of the shapefile. We are ignoring the spatial information
+	attributeTable <- read.dbf('pathToShapefile/shapefileName.dbf') # note this is to the '.dbf' part of the shapefile. We are ignoring the spatial information
 
 The first shapefile we are using here is a sample of tax-assessors parcels from New York. Open it in QGIS to examine it, then read in the attribute table:
 
