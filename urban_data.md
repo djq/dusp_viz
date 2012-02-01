@@ -94,24 +94,33 @@ Put everything together (a little over the top and redundant, but still interest
 
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point(aes(size = ResArea, colour=NumFloors))
 	
-Finally, let's group these plots by a category.
-`ggplot2` refers to this as 'facet plotting'
-Rexamine the data one more time.
+Finally, let's group these plots by a category. `ggplot2` refers to this as 'facet plotting'. Rexamining the data one more time:
 
-	# hmmm, let's look at ZoneDist1
-	unique(mn$ZipCode)
+	head(mn)
+	summary(mn)
+	unique(mn$ZipCode)		# see all the unique values to get an idea how many groups there are
 	
 Now, make a plot by these groups:
 	
 	# facet plot by zipcode
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point() + facet_grid(~ZipCode)
-
+	
+	# facet wrap by zipcode
 	ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point() + facet_wrap(~ZipCode, nrow = 2)
 	
-Try exploring these plots adding the previous dimensions, ilustrated by size or color.
+Try extending these plots bya dding the previous dimensions, ilustrated by size or color.
+
+### Saving your plots
 	
-		
-## spplot
+	plot <- ggplot(data=mn, aes(YearBuilt, BldgArea)) + geom_point()
+	ggsave()
+	ggsave(plot, file="plot.pdf", width=4, height=4)
+	
+
+###	
+	
+	
+### spplot
 
 spplot
 
