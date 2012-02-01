@@ -48,7 +48,7 @@ To read in a `dbf` file you can use the following command:
 
 The first shapefile we are using here is a sample of tax-assessors parcels from New York. Open it in QGIS to examine it, then read in the attribute table:
 
-	mn <- read.dbf('data/new_york/mn_small.dbf')
+	mn <- read.dbf('data/manhattan/mn_small.dbf')
 	
 We are going to focus on exploring non-spatial patterns first.
 	
