@@ -186,9 +186,9 @@ Scale-bars and further refinement are not very easy to include. My preference is
 	
 	# demo = readOGR("data/ny_zip/", "NY_Zip_Energy") # alternative method of reading in data
 	
-	brks.qt = classIntervals(NE$Frac_Bach, n = 7, style = "quantile")
-	brks.jk = classIntervals(NE$Frac_Bach, n = 7, style = "jenks")
-	brks.eq = classIntervals(NE$Frac_Bach, n = 7, style = "equal")
+	brks.qt = classIntervals(demo$kWh_res, n = 7, style = "quantile")
+	brks.jk = classIntervals(demo$kWh_res, n = 7, style = "jenks")
+	brks.eq = classIntervals(demo$kWh_res, n = 7, style = "equal")
 	
 	# Example of one of the map plots
 	spplot(demo, "kWh_res", at=brks.eq$brks, col.regions=pal, col="transparent", main = list(label="Equal breaks"))
