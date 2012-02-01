@@ -126,17 +126,15 @@ A basic map using [OpenStreetMap](http://openstreetmap.org)
 	var map;
 	
 	//This function makes the map
-	function init(){    		
+	function initialize(){    		
 			
 			map = new OpenLayers.Map("mapCanvas");				// make a map object
 			osmLayer = new OpenLayers.Layer.OSM();				// using OpenStreetMap (OSM)
-			map.addLayer(osmLayer);								// add OSM to map	
-			map.addControls();
+			map.addLayer(osmLayer);								
 											
 			var mapCenter = new OpenLayers.LonLat(0, 47);		// make a lon/lat object
 			map.setCenter(mapCenter, 3);  						// set the zoom level
-			
-			map.addLayer(osmLayer);								// add layer to map
+						
 	  
 	}
 	
@@ -166,7 +164,7 @@ A more sophisticated example here:
 
 	var map;
 	
-	function init() {
+	function initialize() {
 		map = new OpenLayers.Map('mapCanvas');
 		map.addControl(new OpenLayers.Control.LayerSwitcher());
 		
