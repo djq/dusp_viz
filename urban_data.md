@@ -137,6 +137,12 @@ Try making a facet-plot by zipcode illustrating energy use.
 
 	library(spplot)
 	
+We are not focusing on beautiful cartography with this package. We just want to make quick plots of the data that are understandable.
+
+Load in the NY zipcode shapefile:
+
+	
+
 	
 
 
