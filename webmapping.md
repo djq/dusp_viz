@@ -263,9 +263,14 @@ From the [Guardian](http://www.google.com/fusiontables/embedviz?viz=MAP&q=select
 	</html>
 
 
-Using the fusion table builder you can explore other datasets:
+### Strategies 
 
+* Using the fusion table builder you can explore other datasets:
 	http://gmaps-samples.googlecode.com/svn/trunk/fusiontables/fusiontableslayer_builder.html
+	
+* JsFiddle enables you to test out snippets. Here is an example with the Openlayers Library loaded in:
+
+	http://jsfiddle.net/stephane_klein/VLKzY/2/
 	
 
 
