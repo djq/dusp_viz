@@ -34,10 +34,6 @@ To access a column use the $ notation:
 
 	dataSample$colName
 	
-#### Try:
-* Calculating the mean and standard deviation of all columns
-* Examining the output of `summary(dataSample)`
-
 ### Reading information from a shapefile
 
 To read in a `dbf` file you can use the following command:
@@ -51,6 +47,10 @@ The first shapefile we are using here is a sample of tax-assessors parcels from 
 	mn <- read.dbf('data/manhattan/mn_small.dbf')
 	
 We are going to focus on exploring non-spatial patterns first.
+
+#### Try:
+* Calculating the mean and standard deviation of all columns
+* Examining the output of `summary(mn)`
 	
 
 ## ggplot2
